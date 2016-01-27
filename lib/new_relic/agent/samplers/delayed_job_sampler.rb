@@ -39,7 +39,7 @@ module NewRelic
         end
 
         FAILED_QUERY = 'failed_at is not NULL'.freeze
-        LOCKED_QUERY = 'locked_by is not NULL'.freeze
+        LOCKED_QUERY = 'failed_at is not NULL and locked_by is not NULL'.freeze
 
         def failed_jobs
           count(FAILED_QUERY)
